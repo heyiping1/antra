@@ -1,0 +1,169 @@
+﻿01 Introduction to C# and Data Types
+
+Understanding Data Types
+
+	1. What type would you choose for the following "numbers"?
+
+		- A person's telephone number 
+		string, assume that a telephone number contains numbers as well as '(', ')', '+', '-', etc.
+
+		- A person’s height
+		float or double, depending on the precision.
+	
+		- A person’s age
+		int or uint, since a person's age must be non-negative and won't exceed 200.
+		
+		- A person’s gender (Male, Female, Prefer Not To Answer)
+		string or enum, since all possible values are known, small, and specific. 
+		
+		- A person’s salary
+		decimal, since it is a monetary value. 
+		
+		- A book’s ISBN
+		string, assume that there are hyphens and significant leading zeros in an ISBN.
+		
+		- A book’s price
+		decimal, since it is a monetary value.
+		
+		- A book’s shipping weight
+		float or double, depending on the required precision. 
+
+		- A country’s population
+		long or ulong, assume that a country's population may exceed 2^31 ~= 2 billion.
+
+		- The number of stars in the universe
+		BigInteger, assume that the number of stars may exceed 2^63 ~= 10^19.
+
+		- The number of employees in each of the small or medium businesses in the United Kingdom (up to about 50,000 employees per business)
+		int or uint, since an int is already enough to represent numbers up to 2^31 - 1.
+
+	2. What are the difference between value type and reference type variables? What is
+	boxing and unboxing?
+		
+		Value type and reference type are two types of variables in C#. 
+		There are several differences between them:
+		a) Value types directly contain their data, while reference types only store the memory address. 
+		b) Value types are stored in stack memory, while reference types are stored in heap memory (references to them are stored in stack).
+		c) Value type will not be collected by garbage collector, while reference type will be collected by garbage collector.
+		d) Value types can be created by struct or enum, while reference types can be created by class, interface, delegate, or array.
+		e) Value type cannot accept any null values, while reference type can accept null values unless the ? is used after the type.
+
+		Boxing is the process of converting a value type to a reference type. 
+		Unboxing is the process of converting a reference type to a value type. 
+		For example:
+		int i = 10;
+		object o = i; // boxing
+		int j = (int) o; // unboxing
+
+	3. What is meant by the terms managed resource and unmanaged resource in .NET?
+
+		Managed resources are objects controlled by the .NET runtime. 
+		Their memory is automatically organized by the garbage collector and cannot be manually freed.
+
+		Unmanaged resources are objects not managed by the .NET runtime.
+		Their memory requires explicit cleanup by calling Dispose() method from IDisposable interface.
+
+	4. Whats the purpose of Garbage Collector in .NET?
+
+		The Garbage Collector in .NET manages the allocation and release of memory for an application automatically.
+		It identifies and releases memory that is no longer in use, which can optimize the use of system resources and prevent memory leak.
+
+Controlling Flow and Converting Types
+
+	1. What happens when you divide an int variable by 0?
+
+		It throws a System.DivideByZeroException: 'Attempted to divide by zero.'
+
+	2. What happens when you divide a double variable by 0?
+
+		It gives a result of:
+		a) positive infinity (for positive double)
+		b) negative infinity (for negative double)
+		c) NaN (for 0.0). 
+
+	3. What happens when you overflow an int variable, that is, set it to a value beyond its range?
+	
+		It shows an error message:
+		a) "Cannot implicitly convert type 'long' to 'int'. An explicit conversion exists (are you missing a cast?)" (if smaller than 2^63)
+		b) "Integral constant is too large" (if larger than 2^63).
+
+	4. What is the difference between x = y++; and x = ++y;?
+
+		x = y++; first assigns the current value of y to x and then increments y.
+		x = ++y; first increments y and then assigns the new value of y to x.
+
+	5. What is the difference between break, continue, and return when used inside a loop statement?
+
+		break, continue, and return are all jump statements in C# that unconditionally transfer control.
+		a) break terminates the closest enclosing iteration immediately.
+		b) continue skips the rest of the current iteration and starts a new iteration of the closest enclosing iteration statement. 
+		c) return terminates execution of the function in which it appears and returns control to the caller.
+
+	6. What are the three parts of a for statement and which of them are required?
+
+		The three parts of a for statement are:
+		a) the initializer section declares and initializes a local loop variable.
+		b) the condition section determines if the next iteration in the loop should be executed. 
+		c) the iterator section defines what happens after each execution of the body of the loop.
+		
+		All the three parts are optional.
+		For example, the statement 'for ( ; ; ){ }' is valid and defines an inifite loop. 
+
+	7. What is the difference between the = and == operators?
+
+		The = operator is used to assign a value to a variable.
+		The == operator is used to compare two values for equality. 
+
+	8. Does the following statement compile? for ( ; true; ) ;
+		
+		Yes. The statement 'for ( ; true; )' compiles and will create an infinite for loop. 
+		
+	9. What does the underscore _ represent in a switch expression?
+
+		The underscore _ represents the default case in a switch expression.
+		It signifies that it should match anything if reached. 
+
+	10. What interface must an object implement to be enumerated over by using the foreach statement?
+
+		To be enumerated over by using the foreach statement, an object must implement the IEnumerable<T> interface.
+
+02 Arrays and Strings
+
+	1. When to use String vs. StringBuilder in C#?
+
+		In C#, String is immutable, so every time we modify a string, we create a new string in memory, which allocates extra space.
+		Therefore, when we need to perform frequent string manipulations, we may use StringBuilder to save memory and improve performance.
+		Otherwise, if we do not need frequent modification on the string value, we can directly use String.
+
+	2. What is the base class for all arrays in C#?
+
+		The System.Array class is the base clss for all arrays in C#.
+		It provides methods for creating, manipulating, searching, and sorting arrays.
+
+	3. How do you sort an array in C#?
+
+		To sort an array in C#, we can use the Array.Sort() method. 
+		There are five parameters that can be passed in the method.
+		a) keys: the one-dimensional Array that contains the keys to sort.
+		b) items (nullable): the one-dimensional Array that contains the items that correspond to each of the keys in the keys Array.
+		c) index: the starting index of the range to sort.
+		d) length: the number of elements in the range to sort.
+		e) comparer (nullable): the IComparer implementation to use when comparing elements.
+
+	4. What property of an array object can be used to get the total number of elements in an array?
+		
+		We can use the Length property of an array object to get the total number of elements in the array.
+
+	5. Can you store multiple data types in System.Array?
+		
+		No. We can only store a single type of data in System.Array.
+		We should specify the data type when creating the Array.
+
+	6. What’s the difference between the System.Array.CopyTo() and System.Array.Clone()?
+
+		System.Array.CopyTo() and System.Array.Clone() are both methods provided by the System.Array class in C# for creating copies of arrays. 
+		Both methods perform shallow copies of the elements.
+		
+		The difference between them is:
+		CopyTo() is used to is used when we want to copy elements into an existing array, so it requires a target array.
+		Clone() is used when we want to create a new array object that is a copy of the original array. 
