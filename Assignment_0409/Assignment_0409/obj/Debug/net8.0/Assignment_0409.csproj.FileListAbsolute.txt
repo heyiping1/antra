@@ -1,0 +1,14 @@
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\bin\Debug\net8.0\Assignment_0409.exe
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\bin\Debug\net8.0\Assignment_0409.deps.json
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\bin\Debug\net8.0\Assignment_0409.runtimeconfig.json
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\bin\Debug\net8.0\Assignment_0409.dll
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\bin\Debug\net8.0\Assignment_0409.pdb
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\obj\Debug\net8.0\Assignment_0409.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\obj\Debug\net8.0\Assignment_0409.AssemblyInfoInputs.cache
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\obj\Debug\net8.0\Assignment_0409.AssemblyInfo.cs
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\obj\Debug\net8.0\Assignment_0409.csproj.CoreCompileInputs.cache
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\obj\Debug\net8.0\Assignment_0409.dll
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\obj\Debug\net8.0\refint\Assignment_0409.dll
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\obj\Debug\net8.0\Assignment_0409.pdb
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\obj\Debug\net8.0\Assignment_0409.genruntimeconfig.cache
+C:\Users\Yiping He\Desktop\Grace Period\ICC\Antra\C#\Assignment_0409\Assignment_0409\obj\Debug\net8.0\ref\Assignment_0409.dll
