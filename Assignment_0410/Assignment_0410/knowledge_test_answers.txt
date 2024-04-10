@@ -1,0 +1,55 @@
+﻿04 Generics
+
+1. Describe the problem generics address.
+
+	Without generics, if we want to implement functionalities that operate on different
+	data types, we have to either write duplicate code for each type, which is hard to 
+	read and maintain, or use the base object class, which can lead to loose type safety
+	and unwanted boxing.
+
+	By using generics, we can improve code reusability, readability, and maintainability. 
+	It can also provide type safety and flexibility.
+
+2. How would you create a list of strings, using the generic List class?
+
+	To create a list of strings, we can use string as the generic type in the <>.
+	For example, List<string> words = new List<string>();
+
+3. How many generic type parameters does the Dictionary class have?
+
+	The Dictionary class has two generic type parameters, one for key and one for value.
+	For example, Dictionary<string, int> wordCounts = new Dictionary<string, int>();
+
+4. True/False. When a generic class has multiple type parameters, they must all match.
+	
+	True. 
+
+5. What method is used to add items to a List object?
+	
+	The method used to add items to a List is 'Add'.
+	For example, words.Add("hello");
+
+6. Name two methods that cause items to be removed from a List.
+	
+	Two methods that can remove items from a List are 'Remove' and 'RemoveAt'.
+	For example, words.Remove("hello"); or words.RemoveAt(0);
+
+7. How do you indicate that a class has a generic type parameter?
+
+	To indicate that a class has a generic type parameter, we can place the
+	type parameter within <> after the class name.
+	For example, class GenericClass<T> {}.
+
+8. True/False. Generic classes can only have one generic type parameter.
+
+	False. Generic classes can have multiple generic type parameters.
+	For example, class MyDictionary<T1, T2> {}.
+
+9. True/False. Generic type constraints limit what can be used for the generic type.
+
+	True. For example, if we want to limit the generic type to reference type,
+	we can use class GenericClass<T> where T : class {}.
+
+10. True/False. Constraints let you use the methods of the thing you are constraining to.
+
+	True. 
