@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+}
+
+header {
+    background-image: url("https://i.pinimg.com/originals/70/0e/6a/700e6a06e2dc3c5174178ba09a8b094d.jpg");
+    background-size: cover;
+    background-position: 0%;
+    color: white;
+    height: 300px;
+    padding: 30px;
+}
+
+.header-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+    font-size: large;
+}
+
+nav ul {
+    background-color: rgb(231, 219, 219);
+    padding: 20px;
+    margin: 0;
+    list-style: none;
+    border-right: 1px solid white;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 50px;
+    position: relative;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    top: -100%; 
+    right: -25px;
+    height: 300%; 
+    border-right: 1px solid white; 
+}
+nav ul li a {
+    text-decoration: none;
+    color: gray;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left {
+    width: 65%;
+}
+
+.right {
+    width: 30%;
+}
+
+.card, .news-card {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid lightgray;
+}
+
+.news-card {
+    background-color: rgb(238, 231, 231);
+}
+
+.card h2, .news-card h2 {
+    color: saddlebrown;
+    margin-bottom: 10px;
+}
+
+.card p, .news-card p {
+    margin-bottom: 20px;
+}
+
+.card a, .news-card p {
+    color: saddlebrown;
+}
+
+.product {
+    margin-top: 20px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.product img {
+    width: 25%;
+    height: auto;
+}
+
+.product-intro {
+    margin: 20px;
+    flex-direction: column;
+}
+
+footer {
+    background-color: saddlebrown;
+    color: white;
+    text-align: left;
+    padding: 20px;
+}

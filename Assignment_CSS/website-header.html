@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Header</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: lightblue;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        img {
+            display: inline-block;
+            width: 20vw;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        nav ul li a {
+            font-size: 12px;
+            color: black;
+            text-decoration: none;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            background-color: gray;
+            min-width: 100px;
+        }
+
+        nav ul ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .stack {
+            flex-direction: column;
+        }
+
+        .first-row {
+            display: flex;
+            align-self: flex-end;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .first-row > * {
+            margin-right: 10px;
+        }
+
+        .search-input {
+            padding: 5px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            margin-right: 5px;
+        }
+
+        .search-button {
+            padding: 5px 5px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background-color: snow;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="https://antra.net" id="logo">
+            <img src="https://d3j0t7vrtr92dk.cloudfront.net/antra/1642697996_AntraLogo.png" alt="Antra Logo">
+        </a>
+        <div class="stack">
+            <div class="first-row">
+                <div>0🔔</div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="dummy.html">USER▼</a>
+                            <ul>
+                                <li><a href="dummy.html">Log in</a></li>
+                                <li><a href="dummy.html">Register</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <input type="text" class="search-input" placeholder="Search...">
+                <a href="dummy.html">
+                    <button class="search-button">🔍</button>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="dummy.html">NEWS</a></li>
+                    <li>
+                        <a href="dummy.html">ABOUT THE UNIVERSITY▼</a>
+                        <ul>
+                            <li><a href="dummy.html">University 1</a></li>
+                            <li><a href="dummy.html">University 2</a></li>
+                            <li><a href="dummy.html">University 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="dummy.html">TRAINING COURSES▼</a>
+                        <ul>
+                            <li><a href="dummy.html">Course 1</a></li>
+                            <li><a href="dummy.html">Course 2</a></li>
+                            <li><a href="dummy.html">Course 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="dummy.html">FOR COMPANIES</a></li>
+                    <li><a href="dummy.html">FORUM</a></li>
+                    <li><a href="dummy.html">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+</body>
+
+</html>
